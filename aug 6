@@ -1,0 +1,74 @@
+#include<iostream>
+#include<string>
+#include<vector>
+using namespace std;
+
+----------------------------------------------
+a sentence with few words is given. each word is separated by a space. k is given as input. return the first k words in that sentence 
+------------------------------
+string solve(int k , string s){
+    int n = s.length();
+    int c;
+    
+    for(int i = 0; i <n; i ++){
+        if(s[i]==' '){
+            c++;
+            if(c==k){
+                return s.substr(0,i);
+                    }
+                    }
+                             }
+                             
+                             return "";
+}
+
+
+int main(){
+    string s;
+    getline(cin,s);
+    
+    int k;
+    cin>> k;
+    
+    cout<<solve(k,s);
+    
+    return 0;
+}
+
+
+
+--------------
+light bulb
+------------------
+
+/* 
+
+
+int solve(int n, int arr[]){
+    int count;
+    
+    for(int i = 0; i<n; i ++){
+        if(count%2==0){
+            if(arr[i]==0)count++;
+        }
+        else{
+            if(arr[i]==1)count++;
+        }
+    }
+    
+    return count;
+}
+
+int main(){
+    int n;
+    cin>>n;
+    
+    int array[n];
+    for(int i = 0 ; i <n; i++){
+        cin>>array[i];
+    }
+    
+    cout<<solve(n,array);
+    return 0;
+}
+*/
